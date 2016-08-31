@@ -101,6 +101,9 @@ export default class Select2 extends Component {
     const opt = options;
     if (typeof opt.dropdownParent === 'string') {
       opt.dropdownParent = $(opt.dropdownParent);
+      if (!options.dropdownParent.length) {
+        delete options.dropdownParent;
+      }
     }
     return opt;
   }
