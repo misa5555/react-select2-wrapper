@@ -88,7 +88,7 @@ export default class Select2 extends Component {
 
     if (typeof options.dropdownParent === 'string') {
       options.dropdownParent = $(options.dropdownParent);
-      if (!options.dropdownParent) {
+      if (!options.dropdownParent.length) {
         delete options.dropdownParent;
       }
     }
